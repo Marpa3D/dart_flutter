@@ -10,6 +10,7 @@ void main() {
           title: Text(
             'Dashboard'.toUpperCase(),
           ),
+          backgroundColor: Colors.blueGrey,
         ),
         body: const Center(
           child: Text.rich(
@@ -21,7 +22,7 @@ void main() {
                   style: TextStyle(
                     fontSize: 50.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blue,
+                    color: Colors.blueGrey,
                   ),
                 ),
                 TextSpan(
