@@ -15,11 +15,16 @@ class CriptoCurrencyListApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromARGB(255, 39, 38, 38),
         primarySwatch: Colors.yellow,
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(
+        textTheme: TextTheme(
+          bodyMedium: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w400,
             fontSize: 22,
+          ),
+          labelSmall: TextStyle(
+            color: Colors.white.withOpacity(0.8),
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
           ),
         ),
       ),
@@ -57,12 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -70,11 +70,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: 20,
         itemBuilder: (context, i) => ListTile(
           title: Text(
             "Coins",
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: theme.textTheme.bodyMedium,
+          ),
+          subtitle: Text(
+            '22000\$',
+            style: theme.textTheme.labelSmall,
           ),
         ),
       ),
