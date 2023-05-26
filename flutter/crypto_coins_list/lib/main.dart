@@ -72,6 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView.builder(
         itemCount: 20,
         itemBuilder: (context, i) => ListTile(
+          leading:,
+          trailing:,
           title: Text(
             "Coins",
             style: theme.textTheme.bodyMedium,
