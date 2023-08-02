@@ -1,4 +1,8 @@
 // Игра "Камень, ножницы, бумага"
+import 'dart:io';
+
 void main() {
-  print('Привет, это игра "Камень, ножницы, бумага"');
+  stdout.write('Добро пожаловать в игру "Камень, ножницы, бумага" (r/p/s)! ');
+  final input = stdin.readLineSync();
+  print(input);
 }
