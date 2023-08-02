@@ -1,4 +1,4 @@
-import 'package:dart_console_app/dart_console_app.dart';
+import 'package:rock_paper_scissors/rock_paper_scissors.dart';
 import 'package:test/test.dart';
 
 void main() {
